@@ -103,6 +103,10 @@ extern "C" {
 #include "drivers/adc.h"
 #endif
 
+#ifdef RT_USING_DAC
+#include "drivers/dac.h"
+#endif
+
 #ifdef RT_USING_PWM
 #include "drivers/rt_drv_pwm.h"
 #endif
@@ -120,6 +124,18 @@ extern "C" {
 #endif
 #ifdef MTD_USING_NAND
 #include "drivers/mtdnand.h"
+#endif
+
+#ifdef RT_USING_HWCRYPTO
+#include "drivers/crypto.h"
+#endif
+
+#ifdef RT_USING_PULSE_ENCODER
+#include "drivers/pulse_encoder.h"
+#endif
+
+#ifdef RT_USING_INPUT_CAPTURE
+#include "drivers/rt_inputcapture.h"
 #endif
 
 #ifdef __cplusplus
